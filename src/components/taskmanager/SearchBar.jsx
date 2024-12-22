@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from "prop-types"; // Import PropTypes
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
@@ -8,7 +8,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
         placeholder="Search tasks..."
         className="w-full px-4 py-2 border rounded text-gray-900"
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)} 
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
     </div>
   );

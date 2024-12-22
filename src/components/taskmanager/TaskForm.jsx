@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
+import { useState } from "react";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const TaskForm = ({ addTask }) => {
-  const [taskName, setTaskName] = useState('');
-  const [priority, setPriority] = useState('Medium');
+  const [taskName, setTaskName] = useState("");
+  const [priority, setPriority] = useState("Medium");
 
   const handleAddTask = () => {
-    if (taskName.trim() === '') return;
+    if (taskName.trim() === "") return;
     addTask({ name: taskName, priority, completed: false });
-    setTaskName('');
-    setPriority('Medium');
+    setTaskName("");
+    setPriority("Medium");
   };
 
   return (

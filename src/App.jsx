@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import OurServices from "./components/OurServices/OurServices";
 import TaskManager from "./components/taskmanager/TaskManager";
-import AboutPage from './components/pages/AboutPage';
+import AboutPage from "./components/pages/AboutPage";
 import ContactPage from "./components/pages/ContactPage";
 
 const App = () => {
@@ -30,7 +30,6 @@ const App = () => {
               onClick={toggleDarkMode}
               className="px-4 scale-125 py-2 text-white rounded transition transform hover:scale-140 z-10"
             >
-              
               {darkMode ? (
                 <i className="fa-solid fa-toggle-on text-3xl "></i>
               ) : (

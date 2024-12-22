@@ -1,23 +1,23 @@
-import { useState, useEffect } from 'react';
-import TaskForm from './TaskForm';
-import TaskList from './TaskList';
+import { useState, useEffect } from "react";
+import TaskForm from "./TaskForm";
+import TaskList from "./TaskList";
 import Lottie from "lottie-react";
 import animationData from "../../assets/ani1.json";
-import SearchBar from './SearchBar'; 
+import SearchBar from "./SearchBar";
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    const localTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    const localTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
     setTasks(localTasks);
   }, []);
 
   useEffect(() => {
     if (tasks.length > 0) {
-      localStorage.setItem('tasks', JSON.stringify(tasks));
+      localStorage.setItem("tasks", JSON.stringify(tasks));
     }
   }, [tasks]);
 
@@ -35,15 +35,14 @@ const TaskManager = () => {
         ...updatedTasks[index],
         completed: !updatedTasks[index].completed, // Toggle the completion status
       };
-      return updatedTasks; 
+      return updatedTasks;
     });
   };
-  
 
   const deleteTask = (index) => {
     setTasks((prevTasks) => {
       const updatedTasks = prevTasks.filter((_, i) => i !== index);
-      localStorage.setItem('tasks', JSON.stringify(updatedTasks)); // Update localStorage after task deletion
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // Update localStorage after task deletion
       return updatedTasks;
     });
   };

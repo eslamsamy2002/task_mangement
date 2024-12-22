@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <div>
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[600px]">
-        {/* text section */}
         <div className="flex flex-col justify-center gap-8 text-center md:text-left pt-24 md:p-0 pb-10">
           <h1 className="text-4xl lg:text-6xl font-semibold">Stay Organized</h1>
           <p className="text-1xl lg:text-2xl ">
@@ -20,7 +19,6 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        {/* animation section */}
         <div className="flex flex-col justify-center">
           <Lottie
             animationData={animationData}
